@@ -9,5 +9,5 @@ export class Cat extends Model {
     age: number;
 
     @Column
-    breed: string;
+    breed: number;
 }

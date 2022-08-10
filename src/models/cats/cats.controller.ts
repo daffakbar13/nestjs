@@ -1,5 +1,4 @@
-import { Controller, Post } from "@nestjs/common";
-import { CatsService } from "./cats.service";
+import { Controller } from "@nestjs/common";
 
 @Controller()
 

@@ -1,7 +1,7 @@
 import { Injectable } from "@nestjs/common";
 import { CatsService } from "src/models/cats/cats.service";
 
-@Injectable({})
+@Injectable()
 
 export class AuthService {
     constructor(
