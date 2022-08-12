@@ -15,7 +15,7 @@ export class SellingProductsController {
             n_brand: body.brand,
             n_quantity: body.quantity,
             n_price: body.price,
-            n_total: body.price * body.quantity,
+            n_total: parseInt(body.price) * parseInt(body.quantity),
             n_photo: body.photo
         })
     }

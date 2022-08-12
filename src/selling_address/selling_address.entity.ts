@@ -3,7 +3,8 @@ import { Sellings } from '../sellings/sellings.entity';
 
 @Table({
     tableName: 't_selling_address',
-    freezeTableName: true
+    freezeTableName: true,
+    timestamps: false
 })
 export class SellingAddress extends Model {
     @Column({ type: DataType.TEXT })

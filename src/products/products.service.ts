@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/sequelize";
+import { Brands } from "src/brands/brands.entity";
 import { StatusProduct } from "src/status_product/status_product.entity";
 import { Products } from "./products.entity";
 
@@ -16,25 +17,37 @@ export class ProductsService {
             order: [
                 ['id', 'ASC']
             ],
-            include: [{
-                attributes: ['n_status'],
-                model: StatusProduct
-            }]
+            include: [
+                {
+                    attributes: ['n_brand'],
+                    model: Brands
+                },
+                {
+                    attributes: ['n_status'],
+                    model: StatusProduct
+                }
+            ]
         })
     }
 
-    async getProductsByField(field: string, direction: any): Promise<Products[]> {
-        return this.products.findAll({
+    async getProductsByField(field: string, direction: any): Promise<Products> {
+        return this.products.findOne({
             order: [
                 ['id', 'ASC']
             ],
             where: {
                 [field]: direction,
             },
-            include: [{
-                attributes: ['n_status'],
-                model: StatusProduct
-            }]
+            include: [
+                {
+                    attributes: ['n_brand'],
+                    model: Brands
+                },
+                {
+                    attributes: ['n_status'],
+                    model: StatusProduct
+                }
+            ]
         });
     }
 

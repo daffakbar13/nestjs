@@ -1,7 +1,7 @@
-import { Table, Column, Model, DataType, ForeignKey, BelongsTo } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, ForeignKey, BelongsTo, AutoIncrement, HasMany } from 'sequelize-typescript';
 import { PaymentMethods } from 'src/payment_methods/payment_methods.entity';
 import { StatusSelling } from 'src/status_selling/status_selling.entity';
-import { Customers } from '../customers/customers.entity';
+import { Users } from 'src/users/users.entity';
 import { SellingAddress } from '../selling_address/selling_address.entity';
 import { SellingProducts } from '../selling_products/selling_products.entity';
 
@@ -10,12 +10,12 @@ import { SellingProducts } from '../selling_products/selling_products.entity';
     freezeTableName: true
 })
 export class Sellings extends Model {
-    @ForeignKey(() => Customers)
+    @ForeignKey(() => Users)
     @Column({ type: DataType.INTEGER })
-    i_customers_id: number;
+    i_users_id: number;
 
-    @BelongsTo(() => Customers)
-    customer: Customers
+    @BelongsTo(() => Users)
+    customer: Users
 
     @ForeignKey(() => SellingAddress)
     @Column({ type: DataType.INTEGER })
@@ -31,13 +31,6 @@ export class Sellings extends Model {
     @BelongsTo(() => PaymentMethods)
     payment_method: PaymentMethods
 
-    @ForeignKey(() => SellingProducts)
-    @Column({ type: DataType.INTEGER })
-    i_selling_products_id: number;
-
-    @BelongsTo(() => SellingProducts)
-    products: SellingProducts
-
     @ForeignKey(() => StatusSelling)
     @Column({ type: DataType.INTEGER })
     i_status_selling_id: number;
@@ -50,4 +43,7 @@ export class Sellings extends Model {
 
     @Column({ type: DataType.BIGINT })
     n_grand_total: number;
+
+    @HasMany(() => SellingProducts)
+    selling_products: SellingProducts[]
 }

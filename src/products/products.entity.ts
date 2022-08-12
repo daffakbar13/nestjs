@@ -21,7 +21,7 @@ export class Products extends Model {
     status: StatusProduct
 
     @Column({ type: DataType.TEXT })
-    n_products: string;
+    n_product: string;
 
     @Column({ type: DataType.BIGINT })
     n_stock: number;

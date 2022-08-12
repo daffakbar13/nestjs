@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/sequelize";
+import { Products } from "src/products/products.entity";
 import { Brands } from "./brands.entity";
 
 @Injectable()
@@ -8,13 +9,18 @@ export class BrandsService {
     constructor(
         @InjectModel(Brands)
         private brands: typeof Brands,
+        @InjectModel(Products)
+        private products: typeof Products,
     ) { }
 
     async getBrands(): Promise<Brands[]> {
         return this.brands.findAll({
             order: [
                 ['id', 'ASC']
-            ]
+            ],
+            include: {
+                model: Products
+            }
         })
     }
 
@@ -50,5 +56,11 @@ export class BrandsService {
                 [fields]: direction
             }
         });
+        this.products.destroy({
+            where: {
+                i_brands_id: direction
+            }
+        });
+
     }
 }

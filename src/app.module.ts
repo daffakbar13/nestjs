@@ -9,11 +9,9 @@ import { Logger } from './logger/logger.entity';
 import { PaymentMethods } from './payment_methods/payment_methods.entity';
 import { StatusProduct } from './status_product/status_product.entity';
 import { StatusSelling } from './status_selling/status_selling.entity';
-import { Customers } from './customers/customers.entity';
 import { Sellings } from './sellings/sellings.entity';
 import { SellingAddress } from './selling_address/selling_address.entity';
 import { SellingProducts } from './selling_products/selling_products.entity';
-import { PagesModule } from './pages/pages.module';
 import { ProductsModule } from './products/products.module';
 import { StatusProductModule } from './status_product/status_product.module';
 import { BrandModule } from './brands/brands.module';
@@ -21,6 +19,8 @@ import { StatusSellingModule } from './status_selling/status_selling.module';
 import { PaymentMethodsModule } from './payment_methods/payment_methods.module';
 import { SellingsAddressModule } from './selling_address/selling_address.module';
 import { SellingProductsModule } from './selling_products/selling_products.module';
+import { SellingsModule } from './sellings/sellings.module';
+import { Roles } from './roles/roles.entity';
 
 @Module({
   imports: [
@@ -32,6 +32,7 @@ import { SellingProductsModule } from './selling_products/selling_products.modul
       password: 'postgres',
       database: 'nest',
       models: [
+        Roles,
         Logger,
         Users,
         PaymentMethods,
@@ -39,7 +40,6 @@ import { SellingProductsModule } from './selling_products/selling_products.modul
         StatusSelling,
         Products,
         Brands,
-        Customers,
         Sellings,
         SellingAddress,
         SellingProducts
@@ -55,7 +55,8 @@ import { SellingProductsModule } from './selling_products/selling_products.modul
     BrandModule,
     PaymentMethodsModule,
     SellingsAddressModule,
-    SellingProductsModule
+    SellingProductsModule,
+    SellingsModule
   ],
 })
 

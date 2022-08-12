@@ -8,7 +8,7 @@ export class SellingAddressController {
         private sellingAddressService: SellingAddressService
     ) { }
     @Post()
-    insertOne(@Body() body): any {
+    insertSellingAddress(@Body() body): any {
         return this.sellingAddressService.insertSellingAddress({
             n_name: body.name,
             n_phone: body.phone,

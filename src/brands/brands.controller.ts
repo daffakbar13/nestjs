@@ -20,7 +20,7 @@ export class BrandsController {
     @Post()
     insertOne(@Body() body): any {
         return this.brandService.insertBrands({
-            n_brands: body.brands,
+            n_brand: body.brand,
             n_photo: body.photo,
             c_active: body.active
         })

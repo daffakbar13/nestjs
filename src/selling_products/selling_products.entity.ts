@@ -1,11 +1,19 @@
-import { Table, Column, Model, DataType, HasMany } from 'sequelize-typescript';
+import { Table, Column, Model, DataType, HasMany, HasOne, ForeignKey, BelongsTo } from 'sequelize-typescript';
 import { Sellings } from '../sellings/sellings.entity';
 
 @Table({
     tableName: 't_selling_products',
-    freezeTableName: true
+    freezeTableName: true,
+    timestamps: false
 })
 export class SellingProducts extends Model {
+    @ForeignKey(() => Sellings)
+    @Column({ type: DataType.INTEGER })
+    i_sellings_id: number;
+
+    @BelongsTo(() => Sellings)
+    sellings: Sellings
+
     @Column({ type: DataType.TEXT })
     n_product: string;
 
@@ -23,7 +31,4 @@ export class SellingProducts extends Model {
 
     @Column({ type: DataType.TEXT })
     n_photo: string;
-
-    @HasMany(() => Sellings)
-    sellings: Sellings[]
 }
