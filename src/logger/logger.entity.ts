@@ -1,5 +1,5 @@
+import { Users } from '@/api/user/users.entity';
 import { Table, Column, Model, DataType, ForeignKey, BelongsTo } from 'sequelize-typescript';
-import { Users } from 'src/users/users.entity';
 
 @Table({
     tableName: 'logger',

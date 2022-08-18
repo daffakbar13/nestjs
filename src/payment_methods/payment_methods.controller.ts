@@ -1,6 +1,8 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
+import { JwtAuthGuard } from "@/api/user/auth/auth.guard";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards } from "@nestjs/common";
 import { PaymentMethodsService } from "./payment_methods.service";
 
+@UseGuards(JwtAuthGuard)
 @Controller('payment_methods')
 
 export class PaymentMethodsController {

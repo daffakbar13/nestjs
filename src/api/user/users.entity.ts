@@ -1,7 +1,7 @@
+import { Logger } from '@/logger/logger.entity';
 import { Table, Column, Model, DataType, HasMany, ForeignKey, BelongsTo } from 'sequelize-typescript';
 import { Roles } from 'src/roles/roles.entity';
 import { Sellings } from 'src/sellings/sellings.entity';
-import { Logger } from '../logger/logger.entity';
 
 @Table({
     tableName: 'users',

@@ -1,7 +1,7 @@
+import { Users } from '@/api/user/users.entity';
 import { Table, Column, Model, DataType, ForeignKey, BelongsTo, AutoIncrement, HasMany } from 'sequelize-typescript';
 import { PaymentMethods } from 'src/payment_methods/payment_methods.entity';
 import { StatusSelling } from 'src/status_selling/status_selling.entity';
-import { Users } from 'src/users/users.entity';
 import { SellingAddress } from '../selling_address/selling_address.entity';
 import { SellingProducts } from '../selling_products/selling_products.entity';
 

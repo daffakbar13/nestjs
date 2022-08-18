@@ -1,10 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
-import { AuthModule } from './auth/Auth.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { Products } from './products/products.entity';
 import { Brands } from './brands/brands.entity';
-import { Users } from './users/users.entity';
 import { Logger } from './logger/logger.entity';
 import { PaymentMethods } from './payment_methods/payment_methods.entity';
 import { StatusProduct } from './status_product/status_product.entity';
@@ -22,7 +20,13 @@ import { SellingProductsModule } from './selling_products/selling_products.modul
 import { SellingsModule } from './sellings/sellings.module';
 import { Roles } from './roles/roles.entity';
 import { RolesModule } from './roles/roles.module';
-import { UsersModule } from './users/users.module';
+import { ApiModule } from './api/api.module';
+import { getEnvPath } from './common/helper/env.helper';
+import { Users } from './api/user/users.entity';
+import { AuthModule } from './api/user/auth/auth.module';
+import { UsersModule } from './api/user/users.module';
+
+const envFilePath: string = getEnvPath(`${__dirname}/common/envs`);
 
 @Module({
   imports: [
@@ -50,7 +54,6 @@ import { UsersModule } from './users/users.module';
       sync: { alter: true },
       synchronize: true,
     }),
-    AuthModule,
     ProductsModule,
     StatusProductModule,
     StatusSellingModule,
@@ -60,7 +63,9 @@ import { UsersModule } from './users/users.module';
     SellingProductsModule,
     SellingsModule,
     RolesModule,
-    UsersModule
+    UsersModule,
+    ApiModule,
+    AuthModule,
   ],
 })
 

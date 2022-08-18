@@ -1,3 +1,4 @@
+import { Users } from "@/api/user/users.entity";
 import { Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/sequelize";
 import { PaymentMethods } from "src/payment_methods/payment_methods.entity";
@@ -8,7 +9,6 @@ import { SellingProducts } from "src/selling_products/selling_products.entity";
 import { SellingProductsService } from "src/selling_products/selling_products.service";
 import { StatusProduct } from "src/status_product/status_product.entity";
 import { StatusSelling } from "src/status_selling/status_selling.entity";
-import { Users } from "src/users/users.entity";
 import { Sellings } from "./sellings.entity";
 
 @Injectable()

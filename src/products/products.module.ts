@@ -1,3 +1,4 @@
+import { AuthModule } from "@/api/user/auth/auth.module";
 import { Module } from "@nestjs/common";
 import { SequelizeModule } from "@nestjs/sequelize";
 import { StatusProduct } from "src/status_product/status_product.entity";
@@ -10,7 +11,9 @@ import { ProductsService } from "./products.service";
         SequelizeModule.forFeature([
             Products,
             StatusProduct
-        ])],
+        ]),
+        AuthModule
+    ],
     controllers: [ProductsController],
     providers: [ProductsService],
     exports: [ProductsService]
