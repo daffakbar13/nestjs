@@ -10,14 +10,15 @@ export class SellingProductsController {
 
     @Post()
     insertSellingProduct(@Body() body): any {
-        return this.sellingProductsService.insertSellingProduct({
+        const body_sellingProducts = {
             n_product: body.product,
             n_brand: body.brand,
             n_quantity: body.quantity,
             n_price: body.price,
             n_total: parseInt(body.price) * parseInt(body.quantity),
             n_photo: body.photo
-        })
+        }
+        return this.sellingProductsService.insertSellingProduct(body_sellingProducts)
     }
 
     @Delete()

@@ -12,11 +12,6 @@ export class StatusProductController {
         return this.statusProductsService.getStatusProducts()
     }
 
-    @Get('id')
-    findById(@Query() query) {
-        return this.statusProductsService.getStatusProductsByField('id', query.id)
-    }
-
     @Post()
     insertOne(@Body() body): any {
         return this.statusProductsService.insertStatusProduct({
@@ -31,10 +26,5 @@ export class StatusProductController {
             {
                 n_status: body.status,
             })
-    }
-
-    @Delete()
-    async deleteOne(@Body() body) {
-        await this.statusProductsService.deleteStatusProduct('id', body.id)
     }
 }

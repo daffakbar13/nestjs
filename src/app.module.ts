@@ -21,14 +21,16 @@ import { SellingsAddressModule } from './selling_address/selling_address.module'
 import { SellingProductsModule } from './selling_products/selling_products.module';
 import { SellingsModule } from './sellings/sellings.module';
 import { Roles } from './roles/roles.entity';
+import { RolesModule } from './roles/roles.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
     SequelizeModule.forRoot({
       dialect: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      username: 'postgres',
+      host: '0.0.0.0',
+      port: 3500,
+      username: "postgres",
       password: 'postgres',
       database: 'nest',
       models: [
@@ -56,7 +58,9 @@ import { Roles } from './roles/roles.entity';
     PaymentMethodsModule,
     SellingsAddressModule,
     SellingProductsModule,
-    SellingsModule
+    SellingsModule,
+    RolesModule,
+    UsersModule
   ],
 })
 

@@ -26,6 +26,7 @@
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/sequelize": "^9.0.0",
     "cats": "^0.0.2",
+    "docker": "^1.0.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
     "postgres": "^3.2.4",

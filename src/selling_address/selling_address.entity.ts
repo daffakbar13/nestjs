@@ -10,8 +10,8 @@ export class SellingAddress extends Model {
     @Column({ type: DataType.TEXT })
     n_name: string;
 
-    @Column({ type: DataType.BIGINT })
-    n_phone: number;
+    @Column({ type: DataType.TEXT })
+    n_phone: string;
 
     @Column({ type: DataType.TEXT })
     n_address: string;

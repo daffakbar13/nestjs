@@ -9,12 +9,12 @@ export class ProductsController {
     ) { }
 
     @Get()
-    getProducts() {
+    findAll() {
         return this.productsService.getProducts()
     }
 
     @Get(':any')
-    getProductByQuery(@Query() query, @Param('any') params) {
+    findOne(@Query() query, @Param('any') params) {
         switch (params) {
             case 'id':
                 return this.productsService.getProductsByField('id', query.id)
@@ -28,33 +28,40 @@ export class ProductsController {
     }
 
     @Post()
-    insertProduct(@Body() body): any {
-        return this.productsService.insertProduct({
+    insertOne(@Body() body): any {
+        const body_products = {
             i_status_product_id: body.id_status,
-            n_product: body.product,
             i_brands_id: body.id_brand,
+            n_product: body.product,
             n_stock: body.stock,
             n_price: body.price,
             n_photo: body.photo
-        })
+        }
+
+        return this.productsService.insertProduct(body_products)
     }
 
     @Put()
-    async updateProduct(@Body() body) {
-        await this.productsService.updateProduct(
-            body.id,
-            {
-                i_status_product_id: body.id_status,
-                n_products: body.product,
-                i_brands_id: body.id_brand,
-                n_stock: body.stock,
-                n_price: body.price,
-                n_photo: body.photo
-            })
+    async updateOne(@Body() body) {
+        const oldData = await this.productsService.getProductsByField('id', body.id)
+        const body_products = {
+            i_status_product_id: body.id_status,
+            i_brands_id: body.id_brand,
+            n_product: body.product,
+            n_stock: body.stock,
+            n_price: body.price,
+            n_photo: body.photo
+        }
+        await this.productsService.updateProduct(body.id, body_products)
+
+        return {
+            oldData: oldData,
+            newData: body_products
+        }
     }
 
     @Delete()
-    async deleteProduct(@Body() body) {
-        await this.productsService.deleteProduct('id', body.id)
+    async deleteOne(@Body() body) {
+        return await this.productsService.deleteProduct('id', body.id)
     }
 }

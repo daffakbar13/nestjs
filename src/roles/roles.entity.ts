@@ -7,7 +7,7 @@ import { Users } from 'src/users/users.entity';
 })
 export class Roles extends Model {
     @Column({ type: DataType.TEXT })
-    n_roles: string;
+    n_role: string;
 
     @HasMany(() => Users)
     users: Users[]

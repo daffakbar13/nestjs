@@ -25,7 +25,7 @@ export class PaymentMethodsService {
             ],
             where: {
                 [field]: direction,
-            },
+            }
         });
     }
 
@@ -42,13 +42,5 @@ export class PaymentMethodsService {
                 }
             }
         )
-    }
-
-    async deletePaymentMethod(fields: string, direction: any): Promise<void> {
-        this.paymentMethods.destroy({
-            where: {
-                [fields]: direction
-            }
-        });
     }
 }

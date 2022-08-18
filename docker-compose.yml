@@ -1,0 +1,34 @@
+version: '3'
+services:
+  api:
+    image: daffa/nestjs-docker
+    build:
+      dockerfile: Dockerfile
+      context: .
+      # Only will build development stage from our dockerfile
+      target: development
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - backend
+    environment:
+      DATABASE_HOST: postgres
+      NODE_ENV: development
+      PORT: 3000
+    # Run a command against the development stage of the image
+    command: npm run start:dev
+    ports:
+      - 3000:3000
+  postgres:
+    image: postgres:10.4
+    ports:
+      - 3500:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nest
+    networks:
+      - backend
+networks:
+  backend:
+    driver: "bridge"

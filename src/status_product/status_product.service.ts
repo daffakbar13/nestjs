@@ -18,17 +18,6 @@ export class StatusProductService {
         })
     }
 
-    async getStatusProductsByField(field: string, direction: any): Promise<StatusProduct[]> {
-        return this.statusProduct.findAll({
-            order: [
-                ['id', 'ASC']
-            ],
-            where: {
-                [field]: direction,
-            },
-        });
-    }
-
     async insertStatusProduct(items): Promise<StatusProduct> {
         return this.statusProduct.create(items);
     }
@@ -42,13 +31,5 @@ export class StatusProductService {
                 }
             }
         )
-    }
-
-    async deleteStatusProduct(fields: string, direction: any): Promise<void> {
-        this.statusProduct.destroy({
-            where: {
-                [fields]: direction
-            }
-        });
     }
 }

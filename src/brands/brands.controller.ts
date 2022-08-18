@@ -12,29 +12,34 @@ export class BrandsController {
         return this.brandService.getBrands()
     }
 
-    @Get('id')
-    findById(@Query() query) {
-        return this.brandService.getBrandsByField('id', query.id)
+    @Get(':any')
+    findOne(@Query() query) {
+        switch (query) {
+            case 'id':
+                return this.brandService.getBrandsByField('id', query.id)
+            default:
+                break;
+        }
     }
 
     @Post()
     insertOne(@Body() body): any {
-        return this.brandService.insertBrands({
+        const body_brands = {
             n_brand: body.brand,
             n_photo: body.photo,
             c_active: body.active
-        })
+        }
+        return this.brandService.insertBrands(body_brands)
     }
 
     @Put()
     async updateOne(@Body() body) {
-        await this.brandService.updateBrands(
-            body.id,
-            {
-                n_brands: body.brands,
-                n_photo: body.photo,
-                c_active: body.active
-            })
+        const body_brands = {
+            n_brand: body.brand,
+            n_photo: body.photo,
+            c_active: body.active
+        }
+        await this.brandService.updateBrands(body.id, body_brands)
     }
 
     @Delete()

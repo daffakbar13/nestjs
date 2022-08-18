@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Post, Put, Query } from "@nestjs/common";
+import { Body, Controller, Delete, Get, Param, Post, Put, Query } from "@nestjs/common";
 import { PaymentMethodsService } from "./payment_methods.service";
 
 @Controller('payment_methods')
@@ -12,33 +12,33 @@ export class PaymentMethodsController {
         return this.paymentMethodsService.getPaymentMethods()
     }
 
-    @Get('id')
-    findById(@Query() query) {
-        return this.paymentMethodsService.getPaymentMethodsByField('id', query.id)
+    @Get(':any')
+    findOne(@Query() query, @Param('any') params) {
+        switch (params) {
+            case 'id':
+                return this.paymentMethodsService.getPaymentMethodsByField('id', query.id)
+            default:
+                break;
+        }
     }
 
     @Post()
     insertOne(@Body() body): any {
-        return this.paymentMethodsService.insertPaymentMethod({
+        const body_payments = {
             n_account_name: body.account_name,
             n_account_number: body.account_number,
             n_payment_method: body.payment_method,
-        })
+        }
+        return this.paymentMethodsService.insertPaymentMethod(body_payments)
     }
 
     @Put()
     async updateOne(@Body() body) {
-        await this.paymentMethodsService.updatePaymentMethod(
-            body.id,
-            {
-                n_account_name: body.account_name,
-                n_account_number: body.account_number,
-                n_payment_method: body.payment_method,
-            })
-    }
-
-    @Delete()
-    async deleteOne(@Body() body) {
-        await this.paymentMethodsService.deletePaymentMethod('id', body.id)
+        const body_payments = {
+            n_account_name: body.account_name,
+            n_account_number: body.account_number,
+            n_payment_method: body.payment_method,
+        }
+        await this.paymentMethodsService.updatePaymentMethod(body.id, body_payments)
     }
 }

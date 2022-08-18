@@ -1,9 +1,289 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2022-08-12T04:14:34.411Z",
+    "__export_date": "2022-08-18T04:05:40.382Z",
     "__export_source": "insomnia.desktop.app:v2022.5.0",
     "resources": [
+        {
+            "_id": "req_8c1fd750b4d2495fb3797b6024162383",
+            "parentId": "fld_1f584ee4fe464cf6b8d5c6ee2f608851",
+            "modified": 1660636020057,
+            "created": 1660635958829,
+            "url": "http://localhost:3000/users",
+            "name": "Get All Users",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1660636004701,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_1f584ee4fe464cf6b8d5c6ee2f608851",
+            "parentId": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
+            "modified": 1660635957050,
+            "created": 1660635957050,
+            "name": "users",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1660635957050,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
+            "parentId": null,
+            "modified": 1660018537642,
+            "created": 1660018537642,
+            "name": "New Document",
+            "description": "",
+            "scope": "design",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_6b1fed4cea2c49b2a4bcddcc43c8c0b6",
+            "parentId": "fld_1f584ee4fe464cf6b8d5c6ee2f608851",
+            "modified": 1660636048446,
+            "created": 1660636004651,
+            "url": "http://localhost:3000/users/id",
+            "name": "Get User by Id",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_fc7d14d82e854bbaa1988e1b5cfbc994",
+                    "name": "id",
+                    "value": "1",
+                    "description": ""
+                }
+            ],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1660636004651,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_6540dd937cba4b148c97e0e0d35e1e1e",
+            "parentId": "fld_1f584ee4fe464cf6b8d5c6ee2f608851",
+            "modified": 1660795310301,
+            "created": 1660636863568,
+            "url": "http://localhost:3000/users/role",
+            "name": "Get User by Role",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [
+                {
+                    "id": "pair_fc7d14d82e854bbaa1988e1b5cfbc994",
+                    "name": "id",
+                    "value": "1",
+                    "description": ""
+                }
+            ],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1660636004626,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_cb24a39da5734f9d8d73e448f1b24682",
+            "parentId": "fld_1f584ee4fe464cf6b8d5c6ee2f608851",
+            "modified": 1660794920380,
+            "created": 1660636054333,
+            "url": "http://localhost:3000/users",
+            "name": "Add User",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"id_roles\": 1,\n\t\"name\": \"Daffa\",\n\t\"email\": \"daffaraihan03@gmail.com\",\n\t\"password\": \"asd123\",\n\t\"active\": 1\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_8ef133807cde4966a731f91e25d7c39d"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1660636004601,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_98558bfcc620493dbab485ddc778faa0",
+            "parentId": "fld_c1579ad93a534f61bffaba628ff174d8",
+            "modified": 1660794967817,
+            "created": 1660635627980,
+            "url": "http://localhost:3000/roles",
+            "name": "Get All Roles",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [],
+            "authentication": {},
+            "metaSortKey": -1660635895177,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_c1579ad93a534f61bffaba628ff174d8",
+            "parentId": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
+            "modified": 1660635623653,
+            "created": 1660635623653,
+            "name": "roles",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1660635623654,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_1e2d3bb9020b4ba28124c117477b551f",
+            "parentId": "fld_c1579ad93a534f61bffaba628ff174d8",
+            "modified": 1660795475099,
+            "created": 1660635811097,
+            "url": "http://localhost:3000/roles",
+            "name": "Add Role",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"role\": \"Admin\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_966088202e514544bd3daba3ff4b0489"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1660635895152,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_88c5adf463cd408ebdfe3a3d0d3dc825",
+            "parentId": "fld_c1579ad93a534f61bffaba628ff174d8",
+            "modified": 1660795485263,
+            "created": 1660635895127,
+            "url": "http://localhost:3000/roles",
+            "name": "Update Role",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1,\n\t\"role\": \"Admin\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_758abc485d6642f2bdbb807324da9bb0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1660635895127,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_403d098a37a643b686aea56cd7e7cf6b",
+            "parentId": "fld_0f0cfbcc88c5456683218ecc22826287",
+            "modified": 1660795502283,
+            "created": 1660287773156,
+            "url": "http://localhost:3000/sellings",
+            "name": "Order Products",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"full_name\": \"M. Daffa R. A.\",\n\t\"phone\": \"089663417341\",\n\t\"address\": \"Bandung\",\n\t\"payment_method\": 1,\n\t\"status\": 1,\n\t\"user\": 1,\n\t\"grand_total\": 100000,\n\t\"products\": [\n\t\t{\n\t\t\t\"id\": 1,\n\t\t\t\"quantity\": 5\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"quantity\": 7\n\t\t}\n\t]\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "id": "pair_b736a245ccc7499283003bb7f7026524"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1660287773156,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_0f0cfbcc88c5456683218ecc22826287",
+            "parentId": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
+            "modified": 1660287769652,
+            "created": 1660287769652,
+            "name": "sellings",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1660287769652,
+            "_type": "request_group"
+        },
         {
             "_id": "req_79c82a798d7f4e15b9955d0e98cfc8a4",
             "parentId": "fld_99fa502065d5432da580939172917434",
@@ -40,57 +320,17 @@
             "_type": "request_group"
         },
         {
-            "_id": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
-            "parentId": null,
-            "modified": 1660018537642,
-            "created": 1660018537642,
-            "name": "New Document",
-            "description": "",
-            "scope": "design",
-            "_type": "workspace"
-        },
-        {
-            "_id": "req_e4847edd611c40dcad8a2fca4e4acd19",
-            "parentId": "fld_99fa502065d5432da580939172917434",
-            "modified": 1660207805096,
-            "created": 1660205929616,
-            "url": "http://localhost:3000/status_product/id?id=1",
-            "name": "Get Status Products by Id",
-            "description": "",
-            "method": "GET",
-            "body": {},
-            "parameters": [],
-            "headers": [],
-            "authentication": {},
-            "metaSortKey": -1660205217199,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
             "_id": "req_a2d81f1f201040608d41bc9faf8e5ddf",
             "parentId": "fld_99fa502065d5432da580939172917434",
-            "modified": 1660209387671,
+            "modified": 1660794992580,
             "created": 1660206012002,
             "url": "http://localhost:3000/status_product",
             "name": "Add Status Product",
             "description": "",
             "method": "POST",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "status",
-                        "value": "Published",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"status\": \"Published\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -102,7 +342,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -126,28 +366,15 @@
         {
             "_id": "req_75640be7962b4da58d7a67d71c8f00b4",
             "parentId": "fld_99fa502065d5432da580939172917434",
-            "modified": 1660206305654,
+            "modified": 1660794993724,
             "created": 1660206096916,
             "url": "http://localhost:3000/status_product",
             "name": "Update Status Product",
             "description": "",
             "method": "PUT",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "id",
-                        "value": "1",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "status",
-                        "value": "Published",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1,\n\t\"status\": \"Published\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -159,7 +386,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -171,57 +398,6 @@
                 "password": ""
             },
             "metaSortKey": -1660205217180.25,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "req_0088e4bd0a3e448482e36f67596f433f",
-            "parentId": "fld_99fa502065d5432da580939172917434",
-            "modified": 1660210928331,
-            "created": 1660206110111,
-            "url": "http://localhost:3000/status_product",
-            "name": "Delete Status Product",
-            "description": "",
-            "method": "DELETE",
-            "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "1",
-                        "description": ""
-                    }
-                ]
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "id": "pair_b19910e7c87743f09617ce72b7106519",
-                    "name": "",
-                    "value": "",
-                    "description": ""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
-                }
-            ],
-            "authentication": {
-                "type": "basic",
-                "useISO88591": false,
-                "disabled": false,
-                "username": "",
-                "password": ""
-            },
-            "metaSortKey": -1660205217177.125,
             "isPrivate": false,
             "settingStoreCookies": true,
             "settingSendCookies": true,
@@ -267,47 +443,17 @@
             "_type": "request_group"
         },
         {
-            "_id": "req_479691c673fa4f9687e17b8a0d6e3908",
-            "parentId": "fld_4bac2ee70aff4198917f58a9eadbb826",
-            "modified": 1660209413321,
-            "created": 1660209079816,
-            "url": "http://localhost:3000/status_selling/id?id=7",
-            "name": "Get Status Selling by Id",
-            "description": "",
-            "method": "GET",
-            "body": {},
-            "parameters": [],
-            "headers": [],
-            "authentication": {},
-            "metaSortKey": -1660205217199,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
             "_id": "req_024a8cfaa735421f88782b038275d0f1",
             "parentId": "fld_4bac2ee70aff4198917f58a9eadbb826",
-            "modified": 1660209349688,
+            "modified": 1660795001059,
             "created": 1660209079819,
             "url": "http://localhost:3000/status_selling",
             "name": "Add Status Selling",
             "description": "",
             "method": "POST",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "status",
-                        "value": "Canceled",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"status\": \"Refund\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -319,7 +465,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -343,28 +489,15 @@
         {
             "_id": "req_9f4e0b80b3e54fe4a9a22a0839325a4b",
             "parentId": "fld_4bac2ee70aff4198917f58a9eadbb826",
-            "modified": 1660209366092,
+            "modified": 1660795002602,
             "created": 1660209079822,
             "url": "http://localhost:3000/status_selling",
             "name": "Update Status Selling",
             "description": "",
             "method": "PUT",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "id",
-                        "value": "1",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "status",
-                        "value": "Proccess",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1,\n\t\"status\": \"Refund\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -376,7 +509,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -388,57 +521,6 @@
                 "password": ""
             },
             "metaSortKey": -1660205217180.25,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "req_276a655fc5ff4fc0803e0cb69c8ef443",
-            "parentId": "fld_4bac2ee70aff4198917f58a9eadbb826",
-            "modified": 1660209322793,
-            "created": 1660209079824,
-            "url": "http://localhost:3000/status_selling",
-            "name": "Delete Status Selling",
-            "description": "",
-            "method": "DELETE",
-            "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "3",
-                        "description": ""
-                    }
-                ]
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "id": "pair_b19910e7c87743f09617ce72b7106519",
-                    "name": "",
-                    "value": "",
-                    "description": ""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
-                }
-            ],
-            "authentication": {
-                "type": "basic",
-                "useISO88591": false,
-                "disabled": false,
-                "username": "",
-                "password": ""
-            },
-            "metaSortKey": -1660205217177.125,
             "isPrivate": false,
             "settingStoreCookies": true,
             "settingSendCookies": true,
@@ -486,9 +568,9 @@
         {
             "_id": "req_132dfc2e9f7b4d3ba06875ef6897c6c3",
             "parentId": "fld_461013affd934564b90d06636a50cb50",
-            "modified": 1660210781852,
+            "modified": 1660794196342,
             "created": 1660209770491,
-            "url": "http://localhost:3000/payment_methods/id?id=7",
+            "url": "http://localhost:3000/payment_methods/id?id=1",
             "name": "Get Payment Method by Id",
             "description": "",
             "method": "GET",
@@ -509,34 +591,15 @@
         {
             "_id": "req_3cd389439a0b403794f1b2863674c8cc",
             "parentId": "fld_461013affd934564b90d06636a50cb50",
-            "modified": 1660210791586,
+            "modified": 1660794525176,
             "created": 1660209770496,
             "url": "http://localhost:3000/payment_methods",
             "name": "Add Payment Method",
             "description": "",
             "method": "POST",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "account_name",
-                        "value": "Daffa",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_3b2775817b1f495c894127aaa2c52fc2",
-                        "name": "account_number",
-                        "value": "123123",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_dcc9bfdd8505431fb2c1b62237ea56b0",
-                        "name": "payment_method",
-                        "value": "BRI",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"account_name\": \"Daffa\",\n\t\"account_number\": 123123,\n\t\"payment_method\": \"BCA\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -548,7 +611,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -572,28 +635,15 @@
         {
             "_id": "req_e6eb9f9937cd49d8be776d0c1f3b394b",
             "parentId": "fld_461013affd934564b90d06636a50cb50",
-            "modified": 1660210799798,
+            "modified": 1660794552786,
             "created": 1660209770499,
             "url": "http://localhost:3000/payment_methods",
             "name": "Update Payment Method",
             "description": "",
             "method": "PUT",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "id",
-                        "value": "1",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "status",
-                        "value": "Proccess",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"account_name\": \"Daffa\",\n\t\"account_number\": 123123,\n\t\"payment_method\": \"BCA\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -605,7 +655,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -629,22 +679,15 @@
         {
             "_id": "req_e25ba737cce6401784fbd8bf29b38914",
             "parentId": "fld_461013affd934564b90d06636a50cb50",
-            "modified": 1660210808132,
+            "modified": 1660794550808,
             "created": 1660209770502,
             "url": "http://localhost:3000/payment_methods",
             "name": "Delete Payment Method",
             "description": "",
             "method": "DELETE",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "3",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1\n}"
             },
             "parameters": [],
             "headers": [
@@ -656,133 +699,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
-                }
-            ],
-            "authentication": {
-                "type": "basic",
-                "useISO88591": false,
-                "disabled": false,
-                "username": "",
-                "password": ""
-            },
-            "metaSortKey": -1660205217177.125,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "req_8a1076348f1543b9b7b25ebbf02e3791",
-            "parentId": "fld_e80460e82cd34267b8490278754ca1bf",
-            "modified": 1660210647698,
-            "created": 1660210567556,
-            "url": "http://localhost:3000/selling_address",
-            "name": "Add Status Selling",
-            "description": "",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "name",
-                        "value": "Daffa",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_3b2775817b1f495c894127aaa2c52fc2",
-                        "name": "phone",
-                        "value": "089663417341",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_dcc9bfdd8505431fb2c1b62237ea56b0",
-                        "name": "address",
-                        "value": "Bandung",
-                        "description": ""
-                    }
-                ]
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "id": "pair_b19910e7c87743f09617ce72b7106519",
-                    "name": "",
-                    "value": "",
-                    "description": ""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
-                }
-            ],
-            "authentication": {
-                "type": "basic",
-                "useISO88591": false,
-                "disabled": false,
-                "username": "",
-                "password": ""
-            },
-            "metaSortKey": -1660205217186.5,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "fld_e80460e82cd34267b8490278754ca1bf",
-            "parentId": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
-            "modified": 1660210567546,
-            "created": 1660210567546,
-            "name": "selling_address",
-            "description": "",
-            "environment": {},
-            "environmentPropertyOrder": null,
-            "metaSortKey": -1660205166805.875,
-            "_type": "request_group"
-        },
-        {
-            "_id": "req_7428bd6a8ed34ea99c3e8dfbc820156b",
-            "parentId": "fld_e80460e82cd34267b8490278754ca1bf",
-            "modified": 1660210753722,
-            "created": 1660210567562,
-            "url": "http://localhost:3000/selling_address",
-            "name": "Delete Status Selling",
-            "description": "",
-            "method": "DELETE",
-            "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "3",
-                        "description": ""
-                    }
-                ]
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "id": "pair_b19910e7c87743f09617ce72b7106519",
-                    "name": "",
-                    "value": "",
-                    "description": ""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -841,14 +758,21 @@
         {
             "_id": "req_07b061e170724d33a9b39c82088ea010",
             "parentId": "fld_28d0727868e44f058bf0d593d052b69a",
-            "modified": 1660207857770,
+            "modified": 1660623371224,
             "created": 1660207741844,
-            "url": "http://localhost:3000/brands/id?id=1",
-            "name": "Get Status Products by Id",
+            "url": "http://localhost:3000/brands/id",
+            "name": "Get Brand by Id",
             "description": "",
             "method": "GET",
             "body": {},
-            "parameters": [],
+            "parameters": [
+                {
+                    "id": "pair_1107c890ffe84f0fb682e08ff3be1ec9",
+                    "name": "id",
+                    "value": "1",
+                    "description": ""
+                }
+            ],
             "headers": [],
             "authentication": {},
             "metaSortKey": -1660205217199,
@@ -864,34 +788,15 @@
         {
             "_id": "req_bd07f02bae8e48529c0c87ad4080e66c",
             "parentId": "fld_28d0727868e44f058bf0d593d052b69a",
-            "modified": 1660208474591,
+            "modified": 1660794701474,
             "created": 1660207741848,
             "url": "http://localhost:3000/brands",
-            "name": "Add Status Product",
+            "name": "Add Brand",
             "description": "",
             "method": "POST",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "brand",
-                        "value": "Gudang Garam",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_58eb152b8851422d9cb3ef40aeb1df6c",
-                        "name": "photo",
-                        "value": "gudanggaram.jpg",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_6f2ddebd75ef458a9c8af2f4281468c9",
-                        "name": "active",
-                        "value": "1",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"brand\": \"Gudang Garam\",\n\t\"photo\": \"gudanggaram.jpg\",\n\t\"active\": 1\n}"
             },
             "parameters": [],
             "headers": [
@@ -903,7 +808,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -927,28 +832,15 @@
         {
             "_id": "req_04e71740aa644ae29685d4df4c32ae97",
             "parentId": "fld_28d0727868e44f058bf0d593d052b69a",
-            "modified": 1660207870303,
+            "modified": 1660794717311,
             "created": 1660207741852,
             "url": "http://localhost:3000/brands",
-            "name": "Update Status Product",
+            "name": "Update Brand",
             "description": "",
             "method": "PUT",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "id",
-                        "value": "1",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "status",
-                        "value": "Published",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1,\n\t\"brand\": \"Gudang Garam\",\n\t\"photo\": \"gudanggaram.jpg\",\n\t\"active\": 1\n}"
             },
             "parameters": [],
             "headers": [
@@ -960,7 +852,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -984,22 +876,15 @@
         {
             "_id": "req_cdfa3ad8e4254d1ca6103161e4ce2c62",
             "parentId": "fld_28d0727868e44f058bf0d593d052b69a",
-            "modified": 1660275654240,
+            "modified": 1660794728541,
             "created": 1660207741855,
             "url": "http://localhost:3000/brands",
             "name": "Delete Brand",
             "description": "",
             "method": "DELETE",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "2",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1\n}"
             },
             "parameters": [],
             "headers": [
@@ -1011,7 +896,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -1035,7 +920,7 @@
         {
             "_id": "req_861c8d2b214f4512879c5f3f70e2ebae",
             "parentId": "fld_de7cbacb2eaa46ac827a21fa8cea1139",
-            "modified": 1660272307174,
+            "modified": 1660285811928,
             "created": 1660185322088,
             "url": "http://localhost:3000/products",
             "name": "Get All Products",
@@ -1100,14 +985,21 @@
         {
             "_id": "req_b799c21888a74a1dac54efcee6ed8c3f",
             "parentId": "fld_de7cbacb2eaa46ac827a21fa8cea1139",
-            "modified": 1660205173472,
+            "modified": 1660623051155,
             "created": 1660193114950,
-            "url": "http://localhost:3000/products/status?id=1",
+            "url": "http://localhost:3000/products/status",
             "name": "Get Products by Status",
             "description": "",
             "method": "GET",
             "body": {},
-            "parameters": [],
+            "parameters": [
+                {
+                    "id": "pair_6aa3d37ae417495185826677be90bd3c",
+                    "name": "id",
+                    "value": "1",
+                    "description": ""
+                }
+            ],
             "headers": [],
             "authentication": {},
             "metaSortKey": -1660205169209,
@@ -1123,14 +1015,21 @@
         {
             "_id": "req_2e0e96526a8246d098e0f15b7376ddde",
             "parentId": "fld_de7cbacb2eaa46ac827a21fa8cea1139",
-            "modified": 1660270975335,
+            "modified": 1660623094137,
             "created": 1660193131334,
-            "url": "http://localhost:3000/products/brand?id=2",
+            "url": "http://localhost:3000/products/brand",
             "name": "Get Products by Brand",
             "description": "",
             "method": "GET",
             "body": {},
-            "parameters": [],
+            "parameters": [
+                {
+                    "id": "pair_b4315575316541549fb3d69ccc36876f",
+                    "name": "id",
+                    "value": "1",
+                    "description": ""
+                }
+            ],
             "headers": [],
             "authentication": {},
             "metaSortKey": -1660205169171.5,
@@ -1146,58 +1045,15 @@
         {
             "_id": "req_037d1a1e4ba44a5c8c1b708ae616dbaa",
             "parentId": "fld_de7cbacb2eaa46ac827a21fa8cea1139",
-            "modified": 1660207609689,
+            "modified": 1660795068468,
             "created": 1660018537738,
             "url": "http://localhost:3000/products",
             "name": "Add Product",
             "description": "",
             "method": "POST",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "id_status",
-                        "value": "1",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_092f6d7472c04be580d8dc80a1c6219b",
-                        "name": "product",
-                        "value": "Djaroem Coeklat",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_0dbd689261234f189d2648a27c5fe383",
-                        "name": "id_brand",
-                        "value": "2",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_d256d49090ea4816b768cf3f9f5b3784",
-                        "name": "stock",
-                        "value": "10",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_f6a49120c5e14536873dc0bddbf162d9",
-                        "name": "price",
-                        "value": "20000",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "photo",
-                        "value": "garpit.jpg",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_af0d62885376472ba3635cacc1838252",
-                        "name": "asd",
-                        "value": "asd",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id_status\": 1,\n\t\"id_brand\": 1,\n\t\"product\": \"Marlboro Menthol\",\n\t\"stock\": 100,\n\t\"price\": 30000,\n\t\"photo\": \"marlboromenthol.jpg\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -1209,7 +1065,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -1233,61 +1089,15 @@
         {
             "_id": "req_e9d17eff7ad84897b48f591bb578cd69",
             "parentId": "fld_de7cbacb2eaa46ac827a21fa8cea1139",
-            "modified": 1660207614863,
+            "modified": 1660794808357,
             "created": 1660201195214,
             "url": "http://localhost:3000/products",
             "name": "Update Product",
             "description": "",
             "method": "PUT",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "3",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_c930f58cf5d34aea81fd4b408c8a0a6d",
-                        "name": "id_status",
-                        "value": "1",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_092f6d7472c04be580d8dc80a1c6219b",
-                        "name": "product",
-                        "value": "Djaroem Coeklat",
-                        "description": "",
-                        "disabled": false
-                    },
-                    {
-                        "id": "pair_0dbd689261234f189d2648a27c5fe383",
-                        "name": "id_brand",
-                        "value": "1",
-                        "description": "",
-                        "type": "text",
-                        "multiline": false
-                    },
-                    {
-                        "id": "pair_d256d49090ea4816b768cf3f9f5b3784",
-                        "name": "stock",
-                        "value": "10",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_f6a49120c5e14536873dc0bddbf162d9",
-                        "name": "price",
-                        "value": "20000",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "photo",
-                        "value": "garpit.jpg",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 1,\n\t\"id_status\": 1,\n\t\"id_brand\": 1,\n\t\"product\": \"Marlboro Menthol\",\n\t\"stock\": 100,\n\t\"price\": 30000,\n\t\"photo\": \"marlboromenthol.jpg\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -1299,7 +1109,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],
@@ -1323,22 +1133,15 @@
         {
             "_id": "req_ed7f0905140240ee83a0da6d24c79003",
             "parentId": "fld_de7cbacb2eaa46ac827a21fa8cea1139",
-            "modified": 1660210865665,
+            "modified": 1660794814791,
             "created": 1660204736335,
             "url": "http://localhost:3000/products",
             "name": "Delete Product",
             "description": "",
             "method": "DELETE",
             "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "8",
-                        "description": ""
-                    }
-                ]
+                "mimeType": "application/json",
+                "text": "{\n\t\"id\": 4\n}"
             },
             "parameters": [],
             "headers": [
@@ -1350,147 +1153,7 @@
                 },
                 {
                     "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
-                }
-            ],
-            "authentication": {
-                "type": "basic",
-                "useISO88591": false,
-                "disabled": false,
-                "username": "",
-                "password": ""
-            },
-            "metaSortKey": -1660205169160.5625,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "req_007987f1fd1a4756955bd37acf84741e",
-            "parentId": "fld_5ab9b6598b6746e2af9f42c775b092ce",
-            "modified": 1660270246519,
-            "created": 1660211670990,
-            "url": "http://localhost:3000/selling_products",
-            "name": "Add Selling Product",
-            "description": "",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_092f6d7472c04be580d8dc80a1c6219b",
-                        "name": "product",
-                        "value": "Djaroem Coeklat",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_0dbd689261234f189d2648a27c5fe383",
-                        "name": "brand",
-                        "value": "2",
-                        "description": "",
-                        "type": "text",
-                        "multiline": false
-                    },
-                    {
-                        "id": "pair_d256d49090ea4816b768cf3f9f5b3784",
-                        "name": "quantity",
-                        "value": "7",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_f6a49120c5e14536873dc0bddbf162d9",
-                        "name": "price",
-                        "value": "20000",
-                        "description": ""
-                    },
-                    {
-                        "id": "pair_1a877305c90a4db2b92a056705c4c35b",
-                        "name": "photo",
-                        "value": "garpit.jpg",
-                        "description": ""
-                    }
-                ]
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "id": "pair_b19910e7c87743f09617ce72b7106519",
-                    "name": "",
-                    "value": "",
-                    "description": ""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
-                    "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
-                }
-            ],
-            "authentication": {
-                "type": "basic",
-                "useISO88591": false,
-                "disabled": false,
-                "username": "",
-                "password": ""
-            },
-            "metaSortKey": -1660205169168.375,
-            "isPrivate": false,
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "fld_5ab9b6598b6746e2af9f42c775b092ce",
-            "parentId": "wrk_18b91fd7a44f45eb9c298ef2118b5e3b",
-            "modified": 1660211670986,
-            "created": 1660211670986,
-            "name": "selling_products",
-            "description": "",
-            "environment": {},
-            "environmentPropertyOrder": null,
-            "metaSortKey": -1660205105944,
-            "_type": "request_group"
-        },
-        {
-            "_id": "req_98566632cece435b865a256d03e2eaaa",
-            "parentId": "fld_5ab9b6598b6746e2af9f42c775b092ce",
-            "modified": 1660211712194,
-            "created": 1660211671006,
-            "url": "http://localhost:3000/products",
-            "name": "Delete Selling Product",
-            "description": "",
-            "method": "DELETE",
-            "body": {
-                "mimeType": "application/x-www-form-urlencoded",
-                "params": [
-                    {
-                        "id": "pair_de000fcc622c420bab08e4625ac3af99",
-                        "name": "id",
-                        "value": "8",
-                        "description": ""
-                    }
-                ]
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "id": "pair_b19910e7c87743f09617ce72b7106519",
-                    "name": "",
-                    "value": "",
-                    "description": ""
-                },
-                {
-                    "name": "Content-Type",
-                    "value": "application/x-www-form-urlencoded",
+                    "value": "application/json",
                     "id": "pair_7a6fea642a8a4e7f9d3388090d6b1239"
                 }
             ],

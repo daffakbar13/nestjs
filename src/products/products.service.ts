@@ -30,8 +30,8 @@ export class ProductsService {
         })
     }
 
-    async getProductsByField(field: string, direction: any): Promise<Products> {
-        return this.products.findOne({
+    async getProductsByField(field: string, direction: any): Promise<Products[]> {
+        return this.products.findAll({
             order: [
                 ['id', 'ASC']
             ],
@@ -66,10 +66,21 @@ export class ProductsService {
         )
     }
 
-    async deleteProduct(fields: string, direction: any): Promise<void> {
+    async updateProductStock(id: number, quantity: number): Promise<void> {
+        await this.products.increment(
+            { n_stock: quantity },
+            {
+                where: {
+                    id: id
+                }
+            }
+        )
+    }
+
+    async deleteProduct(field: string, direction: any): Promise<void> {
         this.products.destroy({
             where: {
-                [fields]: direction
+                [field]: direction
             }
         });
     }

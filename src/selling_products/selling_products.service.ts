@@ -11,8 +11,8 @@ export class SellingProductsService {
         private sellingProducts: typeof SellingProducts,
     ) { }
 
-    async insertSellingProduct(items): Promise<SellingProducts> {
-        return this.sellingProducts.create(items);
+    async insertSellingProduct(items): Promise<SellingProducts[]> {
+        return this.sellingProducts.bulkCreate(items);
     }
 
     async deleteSellingProduct(fields: string, direction: any): Promise<void> {
